@@ -55,7 +55,7 @@ const Signin = () => {
   };
 
   return (
-    <div className="flex items-start justify-center w-full h-screen bg-green-400">
+    <div className="flex items-start justify-center w-full h-screen bg-green-500">
       <div className="flex flex-col justify-center">
         <div className="m-20 text-4xl font-bold">Signin</div>
         <div className="flex justify-center w-full mb-8">
