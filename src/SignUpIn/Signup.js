@@ -41,9 +41,7 @@ const Signup = () => {
         }
         return response.json();
       })
-      .then((data) => {
-        // do something with the response body data if needed
-      })
+      .then((data) => {})
       .catch((error) => {
         console.error(error);
       });
@@ -56,15 +54,18 @@ const Signup = () => {
   });
 
   return (
-    <div className="flex items-start justify-center w-full h-screen bg-green-500">
+    <div className="flex items-start justify-center w-full h-screen bg-yellow-50">
       <div className="flex flex-col justify-center">
-        <div className="m-20 text-4xl font-bold">Signup</div>
+        <h1 className="my-20 text-4xl font-bold">Will's Quick Checklist</h1>
+        <div className="flex justify-center">
+          <h2 className="mb-20 text-3xl font-bold">Signup</h2>
+        </div>
         <div className="flex justify-center w-full mb-8">
           서비스 이용을 위해 회원가입 해 주세요!
         </div>
         <label>
           <div className="flex flex-row items-center justify-between m-4">
-            <p>이메일 : </p>
+            <p className="font-bold">이메일 : </p>
             <input
               type="email"
               name="userEmail"
@@ -75,7 +76,7 @@ const Signup = () => {
             />
           </div>
           <div className="flex flex-row items-center justify-between m-4">
-            <p>비밀번호 : </p>
+            <p className="font-bold">비밀번호 : </p>
             <input
               type="password"
               name="userPassword"
@@ -89,11 +90,7 @@ const Signup = () => {
             <button
               disabled={validationCheck ? false : true}
               data-testid="signup-button"
-              className={
-                validationCheck
-                  ? "p-2 m-4 bg-blue-500 rounded font-bold"
-                  : "p-2 m-4 bg-blue-200 rounded text-gray-600"
-              }
+              className="p-2 m-4 font-bold bg-blue-500 rounded hover:bg-blue-700 disabled:bg-blue-200 disabled:text-gray-600"
               onClick={() => signupAPI()}
             >
               회원가입

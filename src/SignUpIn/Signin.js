@@ -16,7 +16,12 @@ const Signin = () => {
     });
   };
 
+  const validationCheck =
+    inputValue.userEmail.includes("@") && inputValue.userPassword.length >= 8;
+
   const navigate = useNavigate();
+
+  const signinBlocker = inputValue.userEmail || inputValue.userPassword;
 
   useEffect(() => {
     if (localStorage.getItem("TOKEN")) {
@@ -55,9 +60,9 @@ const Signin = () => {
   };
 
   return (
-    <div className="flex items-start justify-center w-full h-screen bg-green-500">
+    <div className="flex items-start justify-center w-full h-screen bg-yellow-50">
       <div className="flex flex-col justify-center">
-        <div className="m-20 text-4xl font-bold">Signin</div>
+        <h1 className="my-20 text-4xl font-bold">Will's Quick Checklist</h1>
         <div className="flex justify-center w-full mb-8">
           서비스 이용을 위해 로그인 해 주세요!
         </div>
@@ -86,8 +91,18 @@ const Signin = () => {
           </div>
           <div className="flex justify-center w-full">
             <button
+              className={
+                "w-1/3 p-2 m-4 font-bold bg-blue-500 rounded hover:bg-blue-700 disabled:bg-blue-200 disabled:text-gray-500"
+              }
+              onClick={() => navigate("/signup")}
+              disabled={signinBlocker ? true : false}
+            >
+              회원가입
+            </button>
+            <button
               data-testid="signin-button"
-              className="p-2 m-4 font-bold bg-blue-500 rounded"
+              disabled={validationCheck ? false : true}
+              className="w-1/3 p-2 m-4 font-bold bg-blue-500 rounded hover:bg-blue-700 disabled:bg-blue-200 disabled:text-gray-500"
               onClick={() => signinAPI()}
             >
               로그인
