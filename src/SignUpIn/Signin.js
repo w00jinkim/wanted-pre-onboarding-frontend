@@ -80,14 +80,17 @@ const Signin = () => {
           </div>
           <div className="flex flex-row items-center justify-between m-4">
             <p>비밀번호 : </p>
-            <input
-              type="password"
-              name="userPassword"
-              className="px-4 py-1 ml-2 rounded"
-              onChange={handleInput}
-              placeholder="8자리 이상 입력해주세요"
-              data-testid="password-input"
-            />
+            <form>
+              <input
+                type="password"
+                name="userPassword"
+                className="px-4 py-1 ml-2 rounded"
+                onChange={handleInput}
+                placeholder="8자리 이상 입력해주세요"
+                data-testid="password-input"
+                autoComplete="Off"
+              />
+            </form>
           </div>
           <div className="flex justify-center w-full">
             <button
