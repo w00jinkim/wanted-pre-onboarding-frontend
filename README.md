@@ -2,6 +2,9 @@
 
 - 원티드 프리온보딩 사전과제
 
+# 배포 
+- <a href="https://6439018c88cbe71b26c0f586--cute-crisp-d78737.netlify.app/">배포링크<a/> 
+
 ## 참여자
 
 |                                                                Front-end                                                                |
