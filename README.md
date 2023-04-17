@@ -11,7 +11,7 @@
 2. cd [folder name]
 3. cd client
 4. npm install
-5. npms start (리액트가 켜지길 기다립니다.)
+5. npm start (리액트가 켜지길 기다립니다.)
 6. ctrl + c (터미널)
 7. npm build
 8. 빌드되는걸 기다립니다.
